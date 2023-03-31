@@ -1,4 +1,4 @@
 [jumpbox]
-frontend.roboshop.internal Variable=Host User variable
+frontend.roboshop.internal Variable=Host_User_variable
 [webserver]
 127.0.0.1
