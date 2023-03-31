@@ -1,6 +1,6 @@
 - name: say Hello to All servers
   hosts: jumpbox
-  task: 
+  tasks: 
   - name: print Message
     ansible.builtin.debug:
       msg: Hello Servers
