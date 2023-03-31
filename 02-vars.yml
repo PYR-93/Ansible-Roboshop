@@ -17,10 +17,12 @@
       msg: This is a {{Variable}}
 
 
-- name: Demo-Variable not declared in play
+- name: Demo-Variable declared in Inventory_hostFile
   hosts: webserver
   tasks: 
   - name: print Message
+  vars_files:
+    - hosts
     ansible.builtin.debug:
       msg: This is a not declared in play or file {{Variable}}
 
