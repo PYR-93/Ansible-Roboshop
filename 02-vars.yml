@@ -38,4 +38,4 @@
   tasks: 
   - name: Use of System variables
     ansible.builtin.debug:
-      msg: This is you User name {{}}
+      msg: This is you User name {{ansible_hostname}}
