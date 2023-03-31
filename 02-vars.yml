@@ -5,14 +5,16 @@
     vars:
      Variable: User variable
     ansible.builtin.debug:
-      msg: Hello Servers
+      msg: This is a {{Variable}}
 
 - name: Demo-Variable declared in a file
   hosts: webserver
+  vars_files:
+      -password.yml
   tasks: 
   - name: print Message
     ansible.builtin.debug:
-      msg: Hello Azure
+      msg: This is a {{Variable}}
 
 
 - name: Demo-Variable not declared in play
@@ -20,7 +22,7 @@
   tasks: 
   - name: print Message
     ansible.builtin.debug:
-      msg: Hello Azure
+      msg: This is a not declared in play or file {{Variable}}
 
 - name: Demo-Variable declared at the end
   hosts: webserver
