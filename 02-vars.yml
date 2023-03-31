@@ -10,7 +10,7 @@
 - name: Demo-Variable declared in a file
   hosts: webserver
   vars_files:
-      -password.yml
+    - password.yml
   tasks: 
   - name: print Message
     ansible.builtin.debug:
