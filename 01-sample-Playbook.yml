@@ -1,6 +1,13 @@
-- name: say Hello to All servers
+- name: Playbook 1
   hosts: jumpbox
   tasks: 
   - name: print Message
     ansible.builtin.debug:
       msg: Hello Servers
+
+- name: PlayBook 2
+  hosts: webserver
+  tasks: 
+  - name: print Message
+    ansible.builtin.debug:
+      msg: Hello Azure
