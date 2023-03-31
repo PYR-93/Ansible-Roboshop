@@ -21,7 +21,6 @@
   hosts: webserver
   tasks: 
   - name: print Message
-  
     ansible.builtin.debug:
       msg: This is a not declared in play or file {{Variable}}
 
