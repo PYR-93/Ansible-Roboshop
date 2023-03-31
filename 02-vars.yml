@@ -1,0 +1,32 @@
+- name: Demo-Variable declared inside a Play
+  hosts: jumpbox
+  tasks: 
+  - name: print Message
+    vars:
+     Variable: User variable
+    ansible.builtin.debug:
+      msg: Hello Servers
+
+- name: Demo-Variable declared in a file
+  hosts: webserver
+  tasks: 
+  - name: print Message
+    ansible.builtin.debug:
+      msg: Hello Azure
+
+
+- name: Demo-Variable not declared in play
+  hosts: webserver
+  tasks: 
+  - name: print Message
+    ansible.builtin.debug:
+      msg: Hello Azure
+
+- name: Demo-Variable declared at the end
+  hosts: webserver
+  tasks: 
+  - name: print Message
+    ansible.builtin.debug:
+      msg: This is a {{Variable}}
+    vars:
+      Variable: User variable
