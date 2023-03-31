@@ -19,8 +19,6 @@
 
 - name: Demo-Variable declared in Inventory_hostFile
   hosts: webserver
-  vars_files:
-    - hosts
   tasks: 
   - name: print Message
   
