@@ -1,4 +1,4 @@
 [jumpbox]
-frontend.roboshop.internal Variable=Host_User_variable_Jump
+frontend.roboshop.internal Variable=Host_User_variable_Jump ansible_user=centos ansible_ssh_pass=DevOps654321
 [webserver]
-127.0.0.1 Variable=Host_User_variable_Webserver
+127.0.0.1 Variable=Host_User_variable_Webserver ansible_user=centos ansible_ssh_pass=DevOps654321
