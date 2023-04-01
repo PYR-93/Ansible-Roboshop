@@ -24,3 +24,12 @@ A
 Host *
    StrictHostKeyChecking no
    UserKnownHostsFile=/dev/null
+
+
+
+
+
+
+git pull ; sed -i -e 's/Dummy/DevOps654321/g' hosts ; ansible-playbook -i hosts -b 02-vars.yml ; sed -i -e 's/Dummy/DevOps654321/g' hosts
+
+
