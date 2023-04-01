@@ -52,7 +52,6 @@
 #      msg: "{{out.stdout}}"
       
 
----
 - name: Register a variable
   hosts: jumpbox
   tasks:
