@@ -61,3 +61,14 @@
     - name: Get the up time from the defined variable
       debug:
         msg: "{{ out.stdout }}\"   # Extra indentation was removed, and there must be a space after ':' in \"{{ out.stdout }}"
+
+- name: Register a variable
+  hosts: jumpbox
+  tasks:
+    - name: Run some command and store output in a variable
+      command: $?
+      register: command_output
+
+    - name: Print the command output variable
+      debug:
+        var: command_output.stdout_lines
