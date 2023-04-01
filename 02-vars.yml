@@ -41,13 +41,24 @@
       msg: This is you User name {{ansible_hostname}}
 
 
+# - name: Register a variable
+#   hosts: jumpbox
+#   tasks:
+#   - name: Get UpTime
+#     ansible.inbuilt.shell: uptime
+#     register: out
+#   - name: Get the up time from the defined variable
+#     ansible.inbuilt.debug:
+#      msg: "{{out.stdout}}"
+      
+
+---
 - name: Register a variable
   hosts: jumpbox
   tasks:
-  - name: Get UpTime
-    ansible.inbuilt.shell: uptime
-    register: out
-  - name: Get the up time from the defined variable
-    ansible.inbuilt.debug:
-     msg: "{{out.stdout}}"
-      
+    - name: Get UpTime
+      shell: uptime   # 'ansible.inbuilt' is not required, use just 'shell'
+      register: out
+    - name: Get the up time from the defined variable
+      debug:
+        msg: "{{ out.stdout }}\"   # Extra indentation was removed, and there must be a space after ':' in \"{{ out.stdout }}"
