@@ -36,9 +36,9 @@
 - name: Learn System Variable Facts/prdefined variables
   hosts: jumpbox
   tasks: 
-  - name: Use of System variables
-    ansible.builtin.debug:
-      msg: This is you User name {{ansible_hostname}}
+    - name: Use of System variables
+      ansible.builtin.debug:
+        msg: This is you User name {{ansible_hostname}}
 
 
 # - name: Register a variable
