@@ -1,5 +1,5 @@
 #git pull ; sed -i -e 's/Dummy/DevOps654321/g' hosts ; ansible-playbook -i hosts -b 03-Roles.yml ; sed -i -e 's/Dummy/DevOps654321/g' hosts
-
+---
 - name: Demo on Roles
   hosts: jumpbox
   roles:
