@@ -33,7 +33,7 @@
           - a < 10 
       - name: Validate Boolean 
         ansible.builtin.debug:
-          msg: The value is boolean
+          msg: The value is boolean {{var1}}
         when: var1 | bool
 
   
