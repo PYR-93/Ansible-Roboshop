@@ -33,3 +33,6 @@ Host *
 
 git pull ; sed -i -e 's/Dummy/DevOps654321/g' hosts ; ansible-playbook -i hosts -b 02-vars.yml ; sed -i -e 's/Dummy/DevOps654321/g' hosts
 
+git pull ; sed -i -e 's/Dummy/DevOps654321/g' hosts ; ansible-playbook -i hosts -b 02-vars.yml -e Variable="CLI_Standalone variable" -e fact1="Checkdoubleqotefact" ; sed -i -e 's/Dummy/DevOps654321/g' hosts
+
+
