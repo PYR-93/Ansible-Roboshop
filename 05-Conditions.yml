@@ -22,7 +22,7 @@
 - name: Demo on number check and boolean check
   hosts: jumpbox
   vars: 
-     a: 5
+     a: 20
      var1: True
   tasks:
       - name: Check for number
