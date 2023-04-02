@@ -14,7 +14,7 @@
   tasks: 
     - name: Centos verification
       ansible.builtin.debug:
-        msg: The os is centos & version is {{distribution_major_version}}
+        msg: The os is centos & version is {{ansible_facts['distribution_major_version']}}
       when:
       - ansible_facts['distribution'] == "CentOS"
       - ansible_facts['distribution_major_version'] > "6"
