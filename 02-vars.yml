@@ -74,7 +74,7 @@
 
 
 - name: Demo of Facts-Setting up variables
-  hosts: jumpserver
+  hosts: jumpbox
   tasks:
     - name: Get UpTime Test demo only out which is register
       shell: uptime   # 'ansible.inbuilt' is not required, use just 'shell'
