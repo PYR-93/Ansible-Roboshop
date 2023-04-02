@@ -9,10 +9,10 @@
        - Beetroot
        - Carrot
 
-  - name: Dictionary loop
+    - name: Dictionary loop
       ansible.builtin.debug:
         msg: I have {{item.quantity}} {{item.fruit}}
       loop:
-        {fruiy=apple,quantity=10}
-        {fruiy=PineApple,quantity=20}
+        {fruit=apple,quantity=10}
+        {fruit=PineApple,quantity=20}
        
