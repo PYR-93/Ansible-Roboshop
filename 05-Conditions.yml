@@ -23,7 +23,7 @@
   hosts: jumpbox
   vars: 
      a: 20
-     var1: True
+     var1: true
   tasks:
       - name: Check for number
         ansible.builtin.debug:
