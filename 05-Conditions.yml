@@ -4,4 +4,4 @@
     - name: Simple conditions in Ansible
       ansible.builtin.debug:
        msg: "The Selinux is disabled"
-      when: ansible_selinux_status == "disabled"
+      when: ansible_selinux.status == "disabled"
