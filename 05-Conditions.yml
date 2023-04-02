@@ -9,3 +9,9 @@
       ansible.builtin.debug:
        msg: "The Selinux is disabled"
       when: ansible_selinux.status == "disabled"
+
+    - name: Show facts available on the system
+      ansible.builtin.debug:
+        var: ansible_facts
+
+  
