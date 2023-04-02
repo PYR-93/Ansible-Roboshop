@@ -9,15 +9,17 @@
       ansible.builtin.debug:
        msg: "The Selinux is disabled"
       when: ansible_selinux.status == "disabled"
-- name: Demo of checking for cnetos
+- name: Demo of checking for cnetos and its version
   hosts: jumpbox
   tasks: 
-    - name: Centos verification
+    - name: Centos verification and find the Version 
       ansible.builtin.debug:
         msg: The os is centos & version is {{ansible_facts['distribution_major_version']}}
       when:
       - ansible_facts['distribution'] == "CentOS"
       - ansible_facts['distribution_major_version'] > "6"
+
+  
 
     # - name: Show facts available on the system
     #   ansible.builtin.debug:
