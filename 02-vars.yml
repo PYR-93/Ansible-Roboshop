@@ -81,7 +81,7 @@
       register: out
     - name: Setting up Variable/Fact
       ansible.builtin.set_fact:
-        fact1: "{{outstdout}}"
+        fact1: "{{out.stdout}}"
     - name: Print the fact
       ansible.builtin.debug:
         msg: "{{fact1}}"
