@@ -9,13 +9,26 @@
       ansible.builtin.debug:
        msg: "The Selinux is disabled"
       when: ansible_selinux.status == "disabled"
+- name: Demo of checking for cnetos
+  hosts: jumpbox
+  tasks: 
+    - name: Centos verification
+      ansible.builtin.debug:
+        msg: "The os is centos"
+    when:
+      - ansible_facts['distribution'] == "CentOS"
+      - ansible_facts['distribution_major_version'] == "6"
 
     # - name: Show facts available on the system
     #   ansible.builtin.debug:
     #     var: ansible_facts
 
-    - name:
-      ansible.builtin.shell: echo "only on Red Hat 6, derivatives, and later"
-      when: ansible_facts['os_family'] == "RedHat" and ansible_facts['lsb']['major_release'] | int >= 6
+    # - name:
+    #   ansible.builtin.shell: echo "only on Red Hat 6, derivatives, and later"
+    #   when: ansible_facts['os_family'] == "RedHat" and ansible_facts['lsb']['major_release'] | int >= 6
+    # # Notes:The | character in this YAML code is used for converting the major release 
+    #   version of the operating system to an integer type
+
+
 
   
