@@ -1,7 +1,11 @@
 - name: Demo of Conditions
   hosts: jumpbox
   tasks:
-    - name: Simple conditions in Ansible
+    - name: Simple conditions in Ansible - To Check if ansible is enabled
+      ansible.builtin.debug:
+       msg: "The Selinux is enabled"
+      when: ansible_selinux.status == "enabled"
+    - name: Simple conditions in Ansible - To Check if ansible is disabled
       ansible.builtin.debug:
        msg: "The Selinux is disabled"
-      when: ansible_selinux.status == "enabled"
+      when: ansible_selinux.status == "disabled"
