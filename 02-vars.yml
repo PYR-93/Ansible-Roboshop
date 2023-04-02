@@ -87,3 +87,6 @@
         msg: "{{fact1}}"
 
 
+# To overwrite the variable ansible-playbook -i hosts Variable=test-Stnadalone -b 02-vars.yml
+
+
