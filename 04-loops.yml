@@ -1,0 +1,10 @@
+- name: Learn Loops Ex1
+  hosts: jumpbox
+  tasks:
+    - name: Simple Loops
+      ansible.builtin.debug:
+        msg: The fruit is {{item}}
+      loop:
+       - Apple
+       - Beetroot
+       - Carrot
