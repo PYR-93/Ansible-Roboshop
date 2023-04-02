@@ -8,7 +8,6 @@
        - Apple
        - Beetroot
        - Carrot
-  tasks:
     - name: Dictionary loop
       ansible.builtin.debug:
         msg: I have {{ item.quantity }} {{item.fruit}}
