@@ -17,7 +17,7 @@
         msg: "The os is centos"
       when:
       - ansible_facts['distribution'] == "CentOS"
-      - ansible_facts['distribution_major_version'] == "6"
+      - ansible_facts['distribution_major_version'] > "6"
 
     # - name: Show facts available on the system
     #   ansible.builtin.debug:
