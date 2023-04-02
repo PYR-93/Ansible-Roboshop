@@ -62,13 +62,19 @@
       debug:
         msg: "{{ out.stdout }}\"   # Extra indentation was removed, and there must be a space after ':' in \"{{ out.stdout }}"
 
-- name: Register a variable_Test
+- name: Register a variable-Test Demo
   hosts: jumpbox
   tasks:
-    - name: Run some command and store output in a variable
-      shell: $?
-      register: command_output
-
-    - name: Print the command output variable
+    - name: Get UpTime Test demo only out which is register
+      shell: uptime   # 'ansible.inbuilt' is not required, use just 'shell'
+      register: out
+    - name: Get the up time from the defined variable
       debug:
-        var: command_output.stdout_lines
+        msg: "{{ out.stdout }}\"   # Extra indentation was removed, and there must be a space after ':' in \"{{ out.stdout }}"
+
+
+# - name: Demo of Facts-Setting up variables
+#   hosts: jumpserver
+#   tasks:
+#     - name: Setting up Variable/Fact
+
