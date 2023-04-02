@@ -19,12 +19,12 @@
       - ansible_facts['distribution'] == "CentOS"
       - ansible_facts['distribution_major_version'] > "6"
 
-  - name: Demo on number check and boolean check
-    hosts: jumpbox
-    vars: 
+- name: Demo on number check and boolean check
+  hosts: jumpbox
+  vars: 
      a: 5
      var1: True
-    tasks:
+  tasks:
       - name: Check for number
         ansible.builtin.debug:
          msg: The value {{a}} is greater than 1 and less than 10
