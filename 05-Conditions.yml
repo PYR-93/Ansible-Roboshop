@@ -31,6 +31,10 @@
         when: 
           - a > 1 
           - a < 10 
+      - name: Validate Boolean 
+       ansible.builtin.debug:
+        msg: The value {{var1}}
+       when: varl1 | bool
 
   
 
