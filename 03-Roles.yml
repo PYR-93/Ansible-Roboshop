@@ -1,4 +1,4 @@
-- name: Demo on Roles
+- name: Execute demo role on jumpbox
   hosts: jumpbox
   roles:
-    -demo
+  - demo
