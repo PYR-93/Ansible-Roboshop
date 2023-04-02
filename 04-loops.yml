@@ -13,6 +13,6 @@
       ansible.builtin.debug:
         msg: I have {{item.quantity}} {{item.fruit}}
       loop:
-        {fruit=apple,quantity=10}
-        {fruit=PineApple,quantity=20}
+        {fruit: apple,quantity: 10}
+        {fruit: PineApple,quantity: 20}
        
