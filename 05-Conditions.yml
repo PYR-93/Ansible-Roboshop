@@ -15,7 +15,7 @@
     - name: Centos verification
       ansible.builtin.debug:
         msg: "The os is centos"
-    when:
+      when:
       - ansible_facts['distribution'] == "CentOS"
       - ansible_facts['distribution_major_version'] == "6"
 
