@@ -1,0 +1,3 @@
+- name: Demo of role
+  debug:
+   msg: {{URL}}
